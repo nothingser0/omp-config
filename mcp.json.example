@@ -1,0 +1,103 @@
+{
+  "$schema": "https://github.com/can1357/oh-my-pi/raw/main/schemas/mcp.schema.json",
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "disabled": false
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "disabled": false
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:/Users/YOUR_USERNAME"],
+      "disabled": false
+    },
+    "omahkene-search": {
+      "command": "node",
+      "args": ["agent/mcp-servers/omahkene-search.js"],
+      "env": {
+        "OMAHKENE_API_KEY": "your-api-key-here",
+        "OMAHKENE_BASE_URL": "http://your-server:port/v1"
+      },
+      "disabled": false
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "figma-mcp", "--stdio"],
+      "env": {
+        "FIGMA_API_KEY": "figd_YOUR_FIGMA_TOKEN_HERE"
+      },
+      "disabled": false
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"],
+      "disabled": false
+    },
+    "google-stitch": {
+      "command": "npx",
+      "args": ["-y", "mcp-stitch"],
+      "env": {
+        "GOOGLE_API_KEY": "YOUR_GOOGLE_API_KEY_HERE",
+        "PROJECT_ROOT": "C:/Users/YOUR_USERNAME"
+      },
+      "disabled": false
+    },
+    "chrome": {
+      "command": "npx",
+      "args": ["-y", "@hisma/server-puppeteer"],
+      "disabled": false
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_YOUR_GITHUB_TOKEN_HERE"
+      },
+      "disabled": false
+    },
+    "sqlite": {
+      "command": "npx",
+      "args": ["-y", "mcp-sqlite", "--db-path", "agent/data.db"],
+      "disabled": false
+    },
+    "time": {
+      "command": "npx",
+      "args": ["-y", "@pylogmonmcp/time"],
+      "disabled": false
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "disabled": false
+    },
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp?project_ref=YOUR_PROJECT_REF",
+      "headers": {
+        "Authorization": "Bearer YOUR_SUPABASE_TOKEN_HERE"
+      },
+      "disabled": false
+    },
+    "postman": {
+      "command": "npx",
+      "args": ["-y", "@postman/postman-mcp-server"],
+      "env": {
+        "POSTMAN_API_KEY": "PMAK-YOUR_POSTMAN_KEY_HERE"
+      },
+      "disabled": true
+    },
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "@mseep/linear-mcp"],
+      "env": {
+        "LINEAR_API_KEY": "lin_api_YOUR_LINEAR_KEY_HERE"
+      },
+      "disabled": false
+    }
+  }
+}

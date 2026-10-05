@@ -1,0 +1,193 @@
+providers:
+  omahkene:
+    type: openai-compatible
+    baseUrl: "http://your-server:port/v1"
+    apiKey: "your-api-key-here"
+modelRoles:
+  default: omahkene/ag/gemini-3.8-flash-high
+  main: omahkene/kr/claude-sonnet-4.5
+  plan: omahkene/cx/gpt-5.6-terra
+  slow: omahkene/ag/claude-opus-4-6-thinking
+  explore: omahkene/ag/gemini-3.8-flash-medium
+  task: omahkene/ag/gemini-3.8-flash-high
+  reviewer: omahkene/cx/gpt-5.6-luna-review
+  advisor: omahkene/cx/gpt-6-luna
+  vision: omahkene/ag/gemini-pro-agent
+  designer: omahkene/kr/claude-sonnet-4.5
+  smol: omahkene/ag/gemini-3.8-flash-low
+  tiny: omahkene/gemini/gemini-3.5-flash-lite
+  deep: omahkene/kr/claude-sonnet-4.5-thinking
+  writing: omahkene/kr/claude-sonnet-4.5
+  ultrabrain: omahkene/ag/claude-opus-4-6-thinking
+  quick: omahkene/ag/gemini-3.8-flash-low
+  visual: omahkene/ag/gemini-3.8-flash-high
+  web: web/duckduckgo
+symbolPreset: nerd
+theme:
+  dark: dark-volcanic
+  light: light
+setupVersion: 2
+hideThinkingBlock: false
+disabledProviders:
+  - amazon-bedrock
+  - bedrock-mantle
+  - llama.cpp
+  - lm-studio
+  - ollama
+  - openai
+advisor:
+  enabled: true
+  model: omahkene/ag/claude-opus-4-6-thinking
+task:
+  enableLsp: true
+  disabledAgents: []
+dev:
+  autoqaConsent: granted
+doubleEscapeAction: tree
+steeringMode: one-at-a-time
+memory:
+  backend: mnemopi
+autolearn:
+  enabled: true
+  autoContinue: false
+textVerbosity: medium
+codexReasoningSummary: concise
+display:
+  showTokenUsage: true
+  subagentLivePreview: true
+  showTurnTime: true
+edit:
+  mode: apply_patch
+  autoRepair:
+    enabled: true
+compaction:
+  thresholdPercent: 75
+  methodOrder:
+    - handoff
+    - remote
+    - soft
+read:
+  defaultLimit: 1000
+  renderMarkdown: true
+  toolResultPreview: true
+readLineNumbers: true
+tier:
+  subagent: inherit
+bash:
+  autoBackground:
+    enabled: true
+retry:
+  fallbackChains:
+    default:
+      - omahkene/ag/gemini-3.8-flash-high
+      - omahkene/kr/claude-sonnet-4.5
+      - omahkene/cx/gpt-5.6-luna
+      - omahkene/gemini/gemini-3.8-flash
+    main:
+      - omahkene/kr/claude-sonnet-4.5
+      - omahkene/cx/gpt-5.6-terra
+      - omahkene/ag/gemini-3.8-flash-high
+      - omahkene/gemini/gemini-3.8-flash
+    plan:
+      - omahkene/cx/gpt-5.6-terra
+      - omahkene/ag/claude-sonnet-4-6
+      - omahkene/kr/claude-sonnet-4.5-thinking
+      - omahkene/gemini/gemini-3.8-flash
+    slow:
+      - omahkene/ag/claude-opus-4-6-thinking
+      - omahkene/cx/gpt-6-luna
+      - omahkene/kr/claude-sonnet-4.5-thinking
+      - omahkene/gemini/gemini-3.8-flash
+    ultrabrain:
+      - omahkene/ag/claude-opus-4-6-thinking
+      - omahkene/cx/gpt-6-luna
+      - omahkene/kr/claude-sonnet-4.5-thinking
+      - omahkene/gemini/gemini-3.8-flash
+    advisor:
+      - omahkene/cx/gpt-6-luna
+      - omahkene/ag/claude-opus-4-6-thinking
+      - omahkene/kr/claude-sonnet-4.5-thinking
+    deep:
+      - omahkene/kr/claude-sonnet-4.5-thinking
+      - omahkene/cx/gpt-5.6-terra
+      - omahkene/ag/gemini-pro-agent
+      - omahkene/gemini/gemini-3.8-flash
+    task:
+      - omahkene/ag/gemini-3.8-flash-high
+      - omahkene/kr/claude-sonnet-4.5
+      - omahkene/cx/gpt-5.6-luna
+      - omahkene/gemini/gemini-3.8-flash
+    reviewer:
+      - omahkene/cx/gpt-5.6-luna-review
+      - omahkene/kr/claude-sonnet-4.5
+      - omahkene/ag/gemini-3.8-flash-high
+      - omahkene/gemini/gemini-3.8-flash
+    explore:
+      - omahkene/ag/gemini-3.8-flash-medium
+      - omahkene/kr/claude-haiku-4.5
+      - omahkene/gemini/gemini-3.8-flash
+      - omahkene/fireworks/accounts/fireworks/models/deepseek-v4p1-flash
+    designer:
+      - omahkene/kr/claude-sonnet-4.5
+      - omahkene/ag/gemini-3.8-flash-high
+      - omahkene/cx/gpt-5.6-luna
+    writing:
+      - omahkene/kr/claude-sonnet-4.5
+      - omahkene/ag/gemini-3.8-flash-high
+      - omahkene/cx/gpt-5.6-luna
+    vision:
+      - omahkene/ag/gemini-pro-agent
+      - omahkene/gemini/gemini-3.8-flash
+      - omahkene/kr/claude-sonnet-4.5
+    visual:
+      - omahkene/ag/gemini-3.8-flash-high
+      - omahkene/gemini/gemini-3.8-flash
+      - omahkene/kr/claude-sonnet-4.5
+    smol:
+      - omahkene/ag/gemini-3.8-flash-low
+      - omahkene/kr/claude-haiku-4.5
+      - omahkene/gemini/gemini-3.5-flash-lite
+      - omahkene/fireworks/accounts/fireworks/models/deepseek-v4p1-flash
+    tiny:
+      - omahkene/gemini/gemini-3.5-flash-lite
+      - omahkene/ag/gemini-3.8-flash-low
+      - omahkene/kr/claude-haiku-4.5
+    quick:
+      - omahkene/ag/gemini-3.8-flash-low
+      - omahkene/kr/claude-haiku-4.5
+      - omahkene/gemini/gemini-3.5-flash-lite
+      - omahkene/fireworks/accounts/fireworks/models/deepseek-v4p1-flash
+    web:
+      - web/duckduckgo
+      - web/tavily
+colorBlindMode: true
+composer:
+  shape: box
+  tokenRate: true
+statusLine:
+  preset: default
+  transparent: true
+  sessionAccent: true
+terminal:
+  showProgress: true
+tui:
+  textSizing: true
+  renderMermaid: true
+  mouse: false
+  hyperlinks: auto
+  tight: false
+computer:
+  enabled: true
+checkpoint:
+  enabled: true
+github:
+  enabled: true
+security:
+  enabled: true
+plan:
+  enabled: true
+  defaultOnStartup: false
+  autosave: true
+exa:
+  enabled: true
+followUpMode: one-at-a-time

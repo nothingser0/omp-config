@@ -1,0 +1,127 @@
+providers:
+  omahkene:
+    provider: omahkene
+    baseUrl: "http://your-server:port/v1"
+    apiKey: "your-api-key-here"
+    api: openai-completions
+
+    models:
+      - id: kr/claude-sonnet-4.5
+        name: Claude Sonnet 4.5
+        api: openai-completions
+        contextWindow: 200000
+        maxTokens: 8192
+
+      - id: ag/claude-sonnet-4-6
+        name: Claude Sonnet 4.6
+        api: openai-completions
+        contextWindow: 200000
+        maxTokens: 8192
+
+      - id: ag/claude-opus-4-6-thinking
+        name: Claude Opus 4.6 Thinking
+        api: openai-completions
+        contextWindow: 200000
+        maxTokens: 32768
+
+      - id: ag/gemini-3.8-flash-high
+        name: Gemini 3.8 Flash High
+        api: openai-completions
+        contextWindow: 1048576
+        maxTokens: 8192
+
+      - id: ag/gemini-3.8-flash-medium
+        name: Gemini 3.8 Flash Medium
+        api: openai-completions
+        contextWindow: 1048576
+        maxTokens: 8192
+
+      - id: ag/gemini-3.8-flash-low
+        name: Gemini 3.8 Flash Low
+        api: openai-completions
+        contextWindow: 1048576
+        maxTokens: 8192
+
+      - id: ag/gemini-pro-agent
+        name: Gemini Pro Agent
+        api: openai-completions
+        contextWindow: 1048576
+        maxTokens: 8192
+
+      - id: gcli/grok-4.7
+        name: Grok 4.7
+        api: openai-completions
+        contextWindow: 500000
+        maxTokens: 16384
+
+      - id: gcli/grok-4.7-high
+        name: Grok 4.7 High
+        api: openai-completions
+        contextWindow: 500000
+        maxTokens: 16384
+
+      - id: cx/gpt-5.6-luna
+        name: GPT 5.6 Luna
+        api: openai-completions
+        contextWindow: 128000
+        maxTokens: 16384
+
+      - id: cx/gpt-5.6-luna-review
+        name: GPT 5.6 Luna Review
+        api: openai-completions
+        contextWindow: 128000
+        maxTokens: 16384
+
+      - id: cx/gpt-5.6-terra
+        name: GPT 5.6 Terra
+        api: openai-completions
+        contextWindow: 128000
+        maxTokens: 16384
+
+      - id: gcli/grok-4.7-medium
+        name: Grok 4.7 Medium
+        api: openai-completions
+        contextWindow: 500000
+        maxTokens: 16384
+
+      - id: gcli/grok-4.7-low
+        name: Grok 4.7 Low
+        api: openai-completions
+        contextWindow: 500000
+        maxTokens: 16384
+
+      - id: kr/claude-haiku-4.5
+        name: Claude Haiku 4.5
+        api: openai-completions
+        contextWindow: 200000
+        maxTokens: 8192
+
+      - id: kr/claude-sonnet-4.5-thinking
+        name: Claude Sonnet 4.5 Thinking
+        api: openai-completions
+        contextWindow: 200000
+        maxTokens: 8192
+
+      - id: cx/gpt-6-luna
+        name: GPT 6 Luna
+        api: openai-completions
+        contextWindow: 272000
+        maxTokens: 128000
+
+      - id: gemini/gemini-3.8-flash
+        name: Gemini 3.8 Flash (Direct)
+        api: openai-completions
+        contextWindow: 1048576
+        maxTokens: 65536
+
+      - id: gemini/gemini-3.5-flash-lite
+        name: Gemini 3.5 Flash Lite (Direct)
+        api: openai-completions
+        contextWindow: 1048576
+        maxTokens: 65536
+
+      - id: fireworks/accounts/fireworks/models/deepseek-v4p1-flash
+        name: DeepSeek V4.1 Flash (Fireworks)
+        api: openai-completions
+        contextWindow: 1000000
+        maxTokens: 384000
